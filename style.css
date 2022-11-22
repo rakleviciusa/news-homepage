@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  background-color: hsl(36, 100%, 99%);
+  padding: 0 5em;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#overlay {
+  position: fixed;
+  display: none; 
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+aside {
+  background-color: black;
+  padding: 0 1em;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2em;
+}
+
+.footer-posts {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  gap: 20px;
+  padding-right: 1em;
+}
+
+aside p,
+a {
+  color: white;
+}
+
+aside a {
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+aside p {
+  font-size: 0.875rem;
+  margin-top: 1em;
+}
+
+aside h2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 1.7rem;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: hsl(236, 13%, 42%);
+}
+
+nav button {
+  display: none;
+}
+
+p {
+  font-size: 0.9375rem;
+}
+
+article p {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.75em;
+}
+
+.margin-right-0 {
+  margin-right: 0;
+}
+
+main img {
+  width: 100%;
+}
+
+.article-description {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.article-description h1 {
+  font-size: 3rem;
+  margin: 1rem 0 0 0;
+  line-height: 1em;
+  font-weight: 800;
+}
+
+article button {
+  border: none;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  border-radius: 5px;
+  margin-top: 1em;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.heading {
+  margin-right: 1.5em;
+}
+
+.border-up-down {
+  border-top: 1px grey solid;
+  border-bottom: 1px grey solid;
+  margin: 1em 0;
+}
+
+.aside-articles {
+  padding: 0.5em 0;
+}
+
+footer img {
+  height: 100%;
+  max-height: 130px;
+  max-width: 100px;
+  object-fit: cover;
+}
+
+.footer-posts h2,
+.footer-posts a,
+.footer-posts p {
+  margin: 0;
+}
+
+.footer-posts h2 {
+  color: hsl(233, 8%, 79%);
+  letter-spacing: 4px;
+}
+
+.footer-posts a {
+  margin: 0.5em 0;
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+}
+
+aside a:hover,
+nav a:hover,
+main button:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+.footer-posts a:hover {
+  color: hsl(19, 80%, 52%);
+}
+
+.menu-dropdown {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  right: 0;
+  background-color: white;
+  height: 100vh;
+  width: 70%;
+}
+
+#menu-dropdown-close {
+  text-align: end;
+}
+
+.menu-dropdown button {
+  border: none;
+  background-color: inherit;
+  font-size: 4rem;
+  cursor: pointer;
+  margin-bottom: 3em;
+}
+
+.menu-dropdown a {
+  color: black;
+  text-decoration: none;
+  margin: 1em 0;
+  font-size: 1.4rem;
+  margin-left: 4em;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+}
+
+/* body :not(.menu-dropdown) {
+    background: grey;
+} 
+*/
+
+@media (max-width: 910px) {
+  nav a {
+    display: none;
+  }
+
+  nav button {
+    display: block;
+    border: none;
+    background-color: inherit;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+
+  main,
+  article,
+  .article-description,
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-posts {
+    margin-bottom: 2em;
+  }
+
+  article img {
+    min-height: 300px;
+    object-fit: cover;
+  }
+
+  article button {
+    background-color: hsl(19, 80%, 52%);
+  }
+
+  article button:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .container {
+    padding: 0 3em;
+  }
+}
